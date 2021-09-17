@@ -27,8 +27,8 @@ def load_model(framework_dir, checkpoints_dir):
 def Float(x):
     try:
         return float(x)
-    else:
-        return np.nan
+    except:
+        return None
 
 
 class Model(object):
