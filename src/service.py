@@ -134,5 +134,5 @@ class Service(BentoService):
     def calculate(self, input: List[JsonSerializable]):
         input = input[0]
         smiles_list = [inp["input"] for inp in input]
-        output = self.artifacts.model.predict(smiles_list)
+        output = self.artifacts.model.calculate(smiles_list)
         return [output]
