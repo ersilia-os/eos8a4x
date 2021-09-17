@@ -12,14 +12,23 @@ import collections
 import tempfile
 import subprocess
 import csv
+import numpy as np
 
 CHECKPOINTS_BASEDIR = "checkpoints"
 FRAMEWORK_BASEDIR = "framework"
+
 
 def load_model(framework_dir, checkpoints_dir):
     mdl = Model()
     mdl.load(framework_dir, checkpoints_dir)
     return mdl
+
+
+def Float(x):
+    try:
+        return float(x)
+    else:
+        return np.nan
 
 
 class Model(object):
@@ -39,7 +48,7 @@ class Model(object):
     def set_framework_dir(self, dest):
         self.framework_dir = os.path.abspath(dest)
 
-    def predict(self, smiles_list):
+    def calculate(self, smiles_list):
         tmp_folder = tempfile.mkdtemp()
         data_file = os.path.join(tmp_folder, self.DATA_FILE)
         pred_file = os.path.join(tmp_folder, self.PRED_FILE)
@@ -51,11 +60,10 @@ class Model(object):
         run_file = os.path.join(tmp_folder, self.RUN_FILE)
         with open(run_file, "w") as f:
             lines = [
-                "python {0}/run.py {1} {2} --model_dir {3}".format(
+                "python {0}/run.py {1} {2}".format(
                     self.framework_dir,
                     data_file,
-                    pred_file,
-                    self.checkpoints_dir
+                    pred_file
                 )
             ]
             f.write(os.linesep.join(lines))
@@ -69,7 +77,7 @@ class Model(object):
             h = next(reader)
             R = []
             for r in reader:
-                R += [{"descriptor": [float(x) for x in r]}]
+                R += [{"descriptor": [Float(x) for x in r]}]
         return R
 
 
@@ -123,7 +131,7 @@ class Artifact(BentoServiceArtifact):
 @artifacts([Artifact("model")])
 class Service(BentoService):
     @api(input=JsonInput(), batch=True)
-    def predict(self, input: List[JsonSerializable]):
+    def calculate(self, input: List[JsonSerializable]):
         input = input[0]
         smiles_list = [inp["input"] for inp in input]
         output = self.artifacts.model.predict(smiles_list)
