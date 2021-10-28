@@ -1,0 +1,4 @@
+[core]
+    remote = public_repo
+['remote "public_repo"']
+    url = gdrive://1uVEXMxQm7G2NLtl0Yeu0fTplk2oBH36R
