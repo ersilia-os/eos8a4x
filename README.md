@@ -23,6 +23,11 @@ A set of 200 physicochemical descriptors available from the RDKIT, including mol
 * [Source Code](https://github.com/bp-kelley/descriptastorus)
 * Ersilia contributor: [miquelduranfrigola](https://github.com/miquelduranfrigola)
 
+## Ersilia model URLs
+* [GitHub](https://github.com/ersilia-os/eos8a4x)
+* [AWS S3](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8a4x.zip)
+* [DockerHub](https://hub.docker.com/r/ersiliaos/eos8a4x) (AMD64)
+
 ## Citation
 
 If you use this model, please cite the [original authors](https://www.rdkit.org/docs/RDKit_Book.html) of the model and the [Ersilia Model Hub](https://github.com/ersilia-os/ersilia/blob/master/CITATION.cff).
