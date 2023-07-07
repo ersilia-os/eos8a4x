@@ -26,7 +26,7 @@ A set of 200 physicochemical descriptors available from the RDKIT, including mol
 ## Ersilia model URLs
 * [GitHub](https://github.com/ersilia-os/eos8a4x)
 * [AWS S3](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8a4x.zip)
-* [DockerHub](https://hub.docker.com/r/ersiliaos/eos8a4x) (AMD64)
+* [DockerHub](https://hub.docker.com/r/ersiliaos/eos8a4x) (AMD64, ARM64)
 
 ## Citation
 
