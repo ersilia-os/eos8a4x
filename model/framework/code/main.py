@@ -91,12 +91,11 @@ if __name__ == "__main__":
         for r in reader:
             mols += [Chem.MolFromSmiles(r[0])]
     R = desc.calc(mols)
-    print(R)
+    header = [prop.lower() for prop in desc.properties]
     with open(ofile, "w") as f:
         writer = csv.writer(f)
-        writer.writerow(desc.properties)
+        writer.writerow(header)
         for i in range(R.shape[0]):
             r = R[i,:]
-            print(r)
             r = row_to_strings(r)
             writer.writerow(r)
