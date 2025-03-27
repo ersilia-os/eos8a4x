@@ -1,47 +1,49 @@
 {
-  "Identifier": "eos8a4x",
-  "Slug": "rdkit-descriptors",
-  "Status": "Ready",
-  "Title": "Physicochemical descriptors available from RDKIT",
-  "Description": "A set of 200 physicochemical descriptors available from the RDKIT, including molecular weight, solubility and druggability parameters. We have used the DescriptaStorus selection of RDKit descriptors for simplicity.\n",
-  "Source": "Local",
-  "Source Type": "External",
-  "Input": [
-    "Compound"
-  ],
-  "Input Shape": "Single",
-  "Input Dimension": 1,
-  "Task": "Representation",
-  "Subtask": "Featurization",
-  "Biomedical Area": [
-    "Any"
-  ],
-  "Target Organism": [
-    "Not Applicable"
-  ],
-  "Output": [
-    "Descriptor"
-  ],
-  "Output Dimension": 200,
-  "Output Consistency": "Fixed",
-  "Interpretation": "Vector representation of small molecules",
-  "Tag": [
-    "Descriptor"
-  ],
-  "Publication": "https://www.rdkit.org/docs/RDKit_Book.html",
-  "Publication Type": "Other",
-  "Publication Year": 2010,
-  "Source Code": "https://github.com/rdkit/rdkit",
-  "License": "BSD-3-Clause",
-  "Contributor": "miquelduranfrigola",
-  "DockerHub": "https://hub.docker.com/r/ersiliaos/eos8a4x",
-  "Docker Architecture": [
-    "AMD64",
-    "ARM64"
-  ],
-  "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8a4x.zip",
-  "Deployment": [
-    "Local"
-  ],
-  "Incorporation Date": "2021-09-17"
+    "Identifier": "eos8a4x",
+    "Slug": "rdkit-descriptors",
+    "Status": "Ready",
+    "Title": "Physicochemical descriptors available from RDKIT",
+    "Description": "A set of 200 physicochemical descriptors available from the RDKIT, including molecular weight, solubility and druggability parameters. We have used the DescriptaStorus selection of RDKit descriptors for simplicity.\n",
+    "Source": "Local",
+    "Source Type": "External",
+    "Input": [
+        "Compound"
+    ],
+    "Input Shape": "Single",
+    "Input Dimension": 1,
+    "Task": "Representation",
+    "Subtask": "Featurization",
+    "Biomedical Area": [
+        "Any"
+    ],
+    "Target Organism": [
+        "Not Applicable"
+    ],
+    "Output": [
+        "Descriptor"
+    ],
+    "Output Dimension": 200,
+    "Output Consistency": "Fixed",
+    "Interpretation": "Vector representation of small molecules",
+    "Tag": [
+        "Descriptor"
+    ],
+    "Publication": "https://www.rdkit.org/docs/RDKit_Book.html",
+    "Publication Type": "Other",
+    "Publication Year": 2010,
+    "Source Code": "https://github.com/rdkit/rdkit",
+    "License": "BSD-3-Clause",
+    "Contributor": "miquelduranfrigola",
+    "DockerHub": "https://hub.docker.com/r/ersiliaos/eos8a4x",
+    "Docker Architecture": [
+        "AMD64",
+        "ARM64"
+    ],
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8a4x.zip",
+    "Deployment": [
+        "Local"
+    ],
+    "Incorporation Date": "2021-09-17",
+    "Model Size": 1.0,
+    "Environment Size": 496.0
 }
