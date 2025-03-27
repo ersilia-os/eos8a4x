@@ -1,4 +1,4 @@
-input
+smiles
 CN1CCC(CC1)Nc1ncc2ncnc(Nc3ccc(F)c(Cl)c3)c2n1
 CCOC(=O)[C@@H](N)CCC(=O)N[C@@H](CSCc1ccccc1)C(=O)N[C@@H](C(=O)OCC)c1ccccc1
 OC(=O)C(=O)Nc1cccc(c1)-c1nn[nH]n1
