@@ -27,16 +27,16 @@ A set of 200 physicochemical descriptors available from the RDKIT, including mol
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
 |------|------|-----------|-------------|
-| balabanj | float | high |  |
-| bertzct | float | high |  |
-| chi0 | float | high |  |
-| chi0n | float | high |  |
-| chi0v | float | high |  |
-| chi1 | float | high |  |
-| chi1n | float | high |  |
-| chi1v | float | high |  |
-| chi2n | float | high |  |
-| chi2v | float | high |  |
+| balabanj | float | high | Balaban index is a topological descriptor that quantifies molecular complexity based on the graph theory |
+| bertzct | float | high | Bertz complexity index is a topological descriptor that measures molecular complexity based on atom and bond types |
+| chi0 | float | high | Valence connectivity index of order 0 indicating molecular branching and shape |
+| chi0n | float | high | Valence connectivity index of order 0 for non-hydrogen atoms |
+| chi0v | float | high | Valence connectivity index of order 0 using atomic valence |
+| chi1 | float | high | Valence connectivity index of order 1 representing connections between atoms in the molecule |
+| chi1n | float | high | Valence connectivity index of order 1 for heavy atoms only |
+| chi1v | float | high | Valence connectivity index of order 1 using atomic valences |
+| chi2n | float | high | Valence connectivity index of order 2 for heavy atoms in the molecule |
+| chi2v | float | high | Valence connectivity index of order 2 based on valence structure |
 
 _10 of 200 columns are shown_
 ### Source and Deployment
