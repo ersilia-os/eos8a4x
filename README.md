@@ -2,6 +2,7 @@
 
 A set of 200 physicochemical descriptors available from the RDKIT, including molecular weight, solubility and druggability parameters. We have used the DescriptaStorus selection of RDKit descriptors for simplicity.
 
+This model was incorporated on 2021-09-17.
 
 ## Information
 ### Identifiers
