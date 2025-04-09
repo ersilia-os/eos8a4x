@@ -45,7 +45,7 @@
     ],
     "Incorporation Date": "2021-09-17",
     "Model Size": 1.0,
-    "Environment Size": 496.0,
+    "Environment Size": 497.0,
     "Image Size": 413.97,
     "Docker Pack Method": "FastAPI",
     "Computational Performance 1": 30.0,
