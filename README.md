@@ -50,10 +50,10 @@ _10 of 200 columns are shown_
 ### Resource Consumption
 - **Model Size (Mb):** `1`
 - **Environment Size (Mb):** `496`
-- **Image Size (Mb):** `413.97`
+- **Image Size (Mb):** `414.79`
 
 **Computational Performance (seconds):**
-- One input: `30`
+- One input: `29.7`
 
 ### References
 - **Source Code**: [https://github.com/rdkit/rdkit](https://github.com/rdkit/rdkit)
