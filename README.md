@@ -54,8 +54,6 @@ _10 of 200 columns are shown_
 
 **Computational Performance (seconds):**
 - One input: `30`
-- Ten inputs: `20.11`
-- Hundred inputs: `20.9`
 
 ### References
 - **Source Code**: [https://github.com/rdkit/rdkit](https://github.com/rdkit/rdkit)
