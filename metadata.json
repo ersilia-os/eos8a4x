@@ -3,22 +3,19 @@
     "Slug": "rdkit-descriptors",
     "Status": "Ready",
     "Title": "Physicochemical descriptors available from RDKIT",
-    "Description": "A set of 200 physicochemical descriptors available from the RDKIT, including molecular weight, solubility and druggability parameters. We have used the DescriptaStorus selection of RDKit descriptors for simplicity.\n",
+    "Description": "A set of 200 physicochemical descriptors available from the RDKIT, including molecular weight, solubility and druggability parameters. We have used the DescriptaStorus selection of RDKit descriptors for simplicity.",
+    "Deployment": [
+        "Local"
+    ],
     "Source": "Local",
     "Source Type": "External",
+    "Task": "Representation",
+    "Subtask": "Featurization",
     "Input": [
         "Compound"
     ],
-    "Input Shape": "Single",
     "Input Dimension": 1,
-    "Task": "Representation",
-    "Subtask": "Featurization",
-    "Biomedical Area": [
-        "Any"
-    ],
-    "Target Organism": [
-        "Not Applicable"
-    ],
+    "Input Shape": "Single",
     "Output": [
         "Descriptor"
     ],
@@ -28,24 +25,27 @@
     "Tag": [
         "Descriptor"
     ],
-    "Publication": "https://www.rdkit.org/docs/RDKit_Book.html",
+    "Biomedical Area": [
+        "Any"
+    ],
+    "Target Organism": [
+        "Not Applicable"
+    ],
     "Publication Type": "Other",
     "Publication Year": 2010,
+    "Publication": "https://www.rdkit.org/docs/RDKit_Book.html",
     "Source Code": "https://github.com/rdkit/rdkit",
     "License": "BSD-3-Clause",
     "Contributor": "miquelduranfrigola",
+    "Incorporation Date": "2021-09-17",
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8a4x.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos8a4x",
     "Docker Architecture": [
         "AMD64",
         "ARM64"
     ],
-    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8a4x.zip",
-    "Deployment": [
-        "Local"
-    ],
-    "Incorporation Date": "2021-09-17",
+    "Docker Pack Method": "FastAPI",
     "Model Size": 1.0,
     "Environment Size": 497.0,
-    "Image Size": 413.97,
-    "Docker Pack Method": "FastAPI"
+    "Image Size": 413.97
 }
