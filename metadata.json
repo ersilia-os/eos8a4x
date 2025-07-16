@@ -17,7 +17,7 @@
     "Input Dimension": 1,
     "Input Shape": "Single",
     "Output": [
-        "Descriptor"
+        "Value"
     ],
     "Output Dimension": 200,
     "Output Consistency": "Fixed",
