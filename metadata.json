@@ -15,7 +15,6 @@
         "Compound"
     ],
     "Input Dimension": 1,
-    "Input Shape": "Single",
     "Output": [
         "Value"
     ],
@@ -38,6 +37,7 @@
     "License": "BSD-3-Clause",
     "Contributor": "miquelduranfrigola",
     "Incorporation Date": "2021-09-17",
+    "Release": "v1.0.0",
     "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8a4x.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos8a4x",
     "Docker Architecture": [
@@ -52,5 +52,6 @@
     "Computational Performance 3": 22.01,
     "Computational Performance 4": 80.2,
     "Computational Performance 5": 340.71,
+    "Input Shape": "Single",
     "Docker Pack Method": "FastAPI"
 }
