@@ -4,6 +4,7 @@ A set of 200 physicochemical descriptors available from the RDKIT, including mol
 
 This model was incorporated on 2021-09-17.
 
+
 ## Information
 ### Identifiers
 - **Ersilia Identifier:** `eos8a4x`
@@ -13,7 +14,7 @@ This model was incorporated on 2021-09-17.
 - **Task:** `Representation`
 - **Subtask:** `Featurization`
 - **Biomedical Area:** `Any`
-- **Target Organism:** `Not Applicable`
+- **Target Organism:** `Any`
 - **Tags:** `Descriptor`
 
 ### Input
