@@ -1,8 +1,10 @@
 import sys
+import os
 import csv
 import numpy as np
 from rdkit.Chem import Descriptors
 from rdkit import Chem
+from ersilia_pack_utils.core import read_smiles, write_out
 
 
 RDKIT_PROPS = {"1.0.0": ['BalabanJ', 'BertzCT', 'Chi0', 'Chi0n', 'Chi0v', 'Chi1', 'Chi1n',
@@ -51,6 +53,12 @@ RDKIT_PROPS = {"1.0.0": ['BalabanJ', 'BertzCT', 'Chi0', 'Chi0n', 'Chi0v', 'Chi1'
 
 CURRENT_VERSION = "1.0.0"
 
+# parse arguments
+input_file = sys.argv[1]
+output_file = sys.argv[2]
+
+# current file directory
+root = os.path.dirname(os.path.abspath(__file__))
 
 class Rdkit2d(object):
     def __init__(self):
@@ -80,22 +88,14 @@ def row_to_strings(r):
     return r_
 
 
-if __name__ == "__main__":
-    ifile = sys.argv[1]
-    ofile = sys.argv[2]
-    desc = Rdkit2d()
-    mols = []
-    with open(ifile, "r") as f:
-        reader = csv.reader(f)
-        next(reader)
-        for r in reader:
-            mols += [Chem.MolFromSmiles(r[0])]
-    R = desc.calc(mols)
-    header = [prop.lower() for prop in desc.properties]
-    with open(ofile, "w") as f:
-        writer = csv.writer(f)
-        writer.writerow(header)
-        for i in range(R.shape[0]):
-            r = R[i,:]
-            r = row_to_strings(r)
-            writer.writerow(r)
+_, smiles_list = read_smiles(input_file)
+
+mols = []
+for s in smiles_list:
+    mols += [Chem.MolFromSmiles(s[0])]
+
+desc = Rdkit2d()
+R = desc.calc(mols)
+header = [prop.lower() for prop in desc.properties]
+
+write_out(R, header, output_file, np.float32)
