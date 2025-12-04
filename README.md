@@ -2,7 +2,7 @@
 
 A set of 200 physicochemical descriptors available from the RDKIT, including molecular weight, solubility and druggability parameters. We have used the DescriptaStorus selection of RDKit descriptors for simplicity.
 
-This model was incorporated on 2021-09-17.Last packaged on 2025-10-07.
+This model was incorporated on 2021-09-17.Last packaged on 2025-12-04.
 
 ## Information
 ### Identifiers
@@ -50,12 +50,12 @@ _10 of 200 columns are shown_
 ### Resource Consumption
 - **Model Size (Mb):** `1`
 - **Environment Size (Mb):** `496`
-- **Image Size (Mb):** `439.54`
+- **Image Size (Mb):** `442.16`
 
 **Computational Performance (seconds):**
-- 10 inputs: `27.12`
-- 100 inputs: `17.84`
-- 10000 inputs: `74.71`
+- 10 inputs: `27.71`
+- 100 inputs: `18.37`
+- 10000 inputs: `74.03`
 
 ### References
 - **Source Code**: [https://github.com/rdkit/rdkit](https://github.com/rdkit/rdkit)
