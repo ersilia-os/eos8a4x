@@ -1,10 +1,12 @@
 import sys
 import os
-import csv
 import numpy as np
-from rdkit.Chem import Descriptors
+from rdkit.Chem import Descriptors, QED
 from rdkit import Chem
 from ersilia_pack_utils.core import read_smiles, write_out
+
+root = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(root)
 
 
 RDKIT_PROPS = {"1.0.0": ['BalabanJ', 'BertzCT', 'Chi0', 'Chi0n', 'Chi0v', 'Chi1', 'Chi1n',
@@ -53,6 +55,17 @@ RDKIT_PROPS = {"1.0.0": ['BalabanJ', 'BertzCT', 'Chi0', 'Chi0n', 'Chi0v', 'Chi1'
 
 CURRENT_VERSION = "1.0.0"
 
+DESCRIPTOR_FUNCS = {}
+
+for name in RDKIT_PROPS[CURRENT_VERSION]:
+    if name == "qed":
+        DESCRIPTOR_FUNCS[name] = QED.qed
+    else:
+        try:
+            DESCRIPTOR_FUNCS[name] = getattr(Descriptors, name)
+        except AttributeError:
+            raise ValueError(f"Descriptor {name} not found in rdkit.Chem.Descriptors")
+
 # parse arguments
 input_file = sys.argv[1]
 output_file = sys.argv[2]
@@ -63,7 +76,7 @@ root = os.path.dirname(os.path.abspath(__file__))
 class Rdkit2d(object):
     def __init__(self):
         self.properties = RDKIT_PROPS[CURRENT_VERSION]
-        self._funcs = {name: func for name, func in Descriptors.descList}
+        self._funcs = DESCRIPTOR_FUNCS
 
     def calc(self, mols):
         R = []
@@ -77,22 +90,11 @@ class Rdkit2d(object):
             R += [r]
         return np.array(R)
 
-
-def row_to_strings(r):
-    r_ = []
-    for x in r:
-        if np.isnan(x):
-            r_ += [""]
-        else:
-            r_ += [str(x)]
-    return r_
-
-
 _, smiles_list = read_smiles(input_file)
 
 mols = []
 for s in smiles_list:
-    mols += [Chem.MolFromSmiles(s[0])]
+    mols += [Chem.MolFromSmiles(s)]
 
 desc = Rdkit2d()
 R = desc.calc(mols)
