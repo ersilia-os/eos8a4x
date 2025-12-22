@@ -100,4 +100,4 @@ desc = Rdkit2d()
 R = desc.calc(mols)
 header = [prop.lower() for prop in desc.properties]
 
-write_out(R, header, output_file, np.float64)
+write_out(R, header, output_file, np.float32)
