@@ -1,6 +1,6 @@
 # Physicochemical descriptors available from RDKIT
 
-A set of 200 physicochemical descriptors available from the RDKIT, including molecular weight, solubility and druggability parameters. We have used the DescriptaStorus selection of RDKit descriptors for simplicity.
+Assembles 200 physicochemical descriptors from RDKit in a single pass, spanning size and weight, topological indices, polarity, hydrogen bonding capacity, lipophilicity estimates and drug-likeness measures such as QED. The particular selection follows DescriptaStorus, a curated subset that avoids the redundancy and failure-prone entries of the full RDKit list. All values are computed analytically from the structure rather than predicted, making them reproducible and inexpensive as inputs to downstream models.
 
 This model was incorporated on 2021-09-17.Last packaged on 2025-12-22.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2021-09-17.Last packaged on 2025-12-22.
 ### Output
 - **Output Dimension:** `200`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Vector representation of small molecules
+- **Interpretation:** 200 RDKit physicochemical descriptors computed directly from structure.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
