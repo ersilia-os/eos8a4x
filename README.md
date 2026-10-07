@@ -23,7 +23,7 @@ This model was incorporated on 2021-09-17.Last packaged on 2025-12-22.
 ### Output
 - **Output Dimension:** `200`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** 200 RDKit physicochemical descriptors computed directly from structure.
+- **Interpretation:** 200 RDKit descriptors spanning constitution, topology, polarity, lipophilicity and functional group counts, computed deterministically from structure.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |

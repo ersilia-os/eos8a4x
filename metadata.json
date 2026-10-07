@@ -20,7 +20,7 @@
     ],
     "Output Dimension": 200,
     "Output Consistency": "Fixed",
-    "Interpretation": "200 RDKit physicochemical descriptors computed directly from structure.",
+    "Interpretation": "200 RDKit descriptors spanning constitution, topology, polarity, lipophilicity and functional group counts, computed deterministically from structure.",
     "Tag": [
         "Descriptor"
     ],
