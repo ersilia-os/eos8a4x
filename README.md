@@ -2,7 +2,8 @@
 
 Assembles 200 physicochemical descriptors from RDKit in a single pass, spanning size and weight, topological indices, polarity, hydrogen bonding capacity, lipophilicity estimates and drug-likeness measures such as QED. The particular selection follows DescriptaStorus, a curated subset that avoids the redundancy and failure-prone entries of the full RDKit list. All values are computed analytically from the structure rather than predicted, making them reproducible and inexpensive as inputs to downstream models.
 
-This model was incorporated on 2021-09-17.Last packaged on 2025-12-22.
+This model was incorporated on 2021-09-17.
+Last packaged on 2025-12-22.
 
 ## Information
 ### Identifiers
@@ -46,6 +47,7 @@ _10 of 200 columns are shown_
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos8a4x](https://hub.docker.com/r/ersiliaos/eos8a4x)
 - **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8a4x.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8a4x.zip)
+- **Apptainer**: [https://models-sif.s3.eu-north-1.amazonaws.com/eos8a4x_v1.sif](https://models-sif.s3.eu-north-1.amazonaws.com/eos8a4x_v1.sif)
 
 ### Resource Consumption
 - **Model Size (Mb):** `1`
